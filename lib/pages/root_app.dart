@@ -13,7 +13,7 @@ class _RootAppState extends State<RootApp> {
   int pageIndex = 0;
   @override
   Widget build(BuildContext context) {
-    Scaffold(
+    return Scaffold(
       bottomSheet: getFooteer(),
       body: getBody(),
     );

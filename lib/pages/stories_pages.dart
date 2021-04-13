@@ -12,8 +12,24 @@ class _StoriesPageState extends State<StoriesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: white,
+      backgroundColor: black,
       appBar: getAppBar(),
+      body: getBody(),
+    );
+  }
+
+  Widget getBody() {
+    var size = MediaQuery.of(context).size;
+    return Container(
+      decoration: BoxDecoration(
+          color: white,
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+          )),
+      child: Column(
+        children: [],
+      ),
     );
   }
 
@@ -21,16 +37,16 @@ class _StoriesPageState extends State<StoriesPage> {
     return AppBar(
       elevation: 0,
       backgroundColor: white,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
+      title: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Row(
           children: [
             Container(
               width: 40,
               height: 40,
-              decoration: BoxDecoration(shape: BoxShape.circle),
-              color: black.withOpacity(0.1),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: black.withOpacity(0.1),
+              ),
               child: Icon(
                 Entypo.user,
                 color: primary,
@@ -43,8 +59,10 @@ class _StoriesPageState extends State<StoriesPage> {
             Container(
               width: 40,
               height: 40,
-              decoration: BoxDecoration(shape: BoxShape.circle),
-              color: black.withOpacity(0.1),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: black.withOpacity(0.1),
+              ),
               child: Icon(
                 Feather.search,
                 color: darkGrey,
@@ -53,22 +71,19 @@ class _StoriesPageState extends State<StoriesPage> {
             )
           ],
         ),
-
         Text(
           "Stories",
-          style: TextStyle(
-           fontWeight: FontWeight.bold,
-           color: black
-          ),
-        )
-
+          style: TextStyle(fontWeight: FontWeight.bold, color: black),
+        ),
         Row(
           children: [
             Container(
               width: 40,
               height: 40,
-              decoration: BoxDecoration(shape: BoxShape.circle),
-              color: black.withOpacity(0.1),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: black.withOpacity(0.1),
+              ),
               child: Icon(
                 Feather.user_plus,
                 color: darkGrey,
@@ -81,8 +96,10 @@ class _StoriesPageState extends State<StoriesPage> {
             Container(
               width: 40,
               height: 40,
-              decoration: BoxDecoration(shape: BoxShape.circle),
-              color: black.withOpacity(0.1),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: black.withOpacity(0.1),
+              ),
               child: Icon(
                 Entypo.dots_three_horizontal,
                 color: darkGrey,
@@ -91,7 +108,6 @@ class _StoriesPageState extends State<StoriesPage> {
             )
           ],
         )
-
       ]),
     );
   }
